@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1><b>Movie Title</b></h1>
+	<h2>{{ obj.title }}</h2>
+
+	<h1><b>Synopsis</b></h1>
+	<h2>{{ obj.description }}</h2>
+
+	<h1><b>Show Timing</b></h1>
+	<ul>
+		<li>{{ obj.show_timing1 }}</li>
+		<li>{{ obj.show_timing2 }}</li>
+		<li>{{ obj.show_timing3 }}</li> 
+		<li>{{ obj.show_timing4 }}</li>
+	</ul> 
+
+	<h1>Number of tickets Available</h1>
+	<h2>{{ obj.Tickets_available }}</h2> 
+
+	<form method="POST" action=''>{% csrf_token %}
+		<input type="number" name="tickets" value="{{ obj.Tickets_booked }}"/></input>
+		<button class="btn btn-primary">Book Tickets</button> 
+		<button class="btn btn-primary">Book Tickets</button>
+	</form> 
+	 
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<h1><b>Movie Title</b></h1>
+	<h2>{{ obj.title }}</h2>
+
+	<h1><b>Synopsis</b></h1>
+	<h2>{{ obj.description }}</h2>
+
+	<h1><b>Show Timing</b></h1>
+	<ul>
+		<li>{{ obj.show_timing1 }}</li>
+		<li>{{ obj.show_timing2 }}</li>
+		<li>{{ obj.show_timing3 }}</li> 
+		<li>{{ obj.show_timing4 }}</li>
+	</ul> 
+
+	<h1>Number of tickets Available</h1>
+	<h2>{{ obj.Tickets_available }}</h2> 
+
+		{% if obj.Tickets_booked > 5 %}
+			<h3>Sorry you have reached your limit!</h3>
+		{% else %}
+		    <a class="btn btn-primary">Book Tickets</a>
+		{% endif %} 
+
+	<img src="{{ obj.image.url }}"/> 
+	
+
+</body>
+</html>
